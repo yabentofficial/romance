@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>THE ROMANCE ALBUM</title>
+     <link rel="icon" type="png" href="ROMANCE_2.png" class=".logo">
+    <style>
+        body {
+            background-color: rgb(187, 108, 108);
+            text-align: center;
+            font-family: Cambria, Georgia, serif;
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .logo img {
+    width: 150px;          /* լոգոյի չափը */
+    height: auto;
+    display: block;
+    margin: 20px auto;     /* կենտրոնացում */
+    
+    /* Եթե ուզում ես գույնային эффект */
+    background-color: white;  /* կամ ցանկացած գույն */
+    padding: 10px;            /* փոքր ներքին մաս */
+    border-radius: 15px;      /* հարթ անկյուններ */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* ստվեր */
+}
+
+        .album-cover {
+    width: 500px;       
+    height: auto;       
+    border-radius: 10px; 
+    margin: 20px auto;  
+    display: block;     
+    box-shadow: 0 0 15px rgba(0,0,0,0.7); 
+
+    transition: transform 0.5s ease-in-out; /* ավելի արագ, smooth */
+}
+
+
+.album-cover:hover {
+    transform: scale(1.08);  /* 25% enlargement */
+    cursor: pointer;          /* Interactive cursor */
+}
+
+        h1 {
+            font-size: 40px;
+            font-weight: 900;
+            font-family: serif;
+            
+        }
+
+        h2 {
+            font-size: 30px;
+            font-weight: bolder;
+            color: beige;
+            font-family: serif;
+            text-shadow: 1px 1px 3px black;
+            
+        }
+
+        ol {
+    color: brown;
+    background-color: rgb(106, 1, 2); 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 900;
+    text-align: center;
+    font-size: 40px ;
+
+    padding: 50px 100px;    
+    
+    display: inline-block;
+
+    min-width: 300px; 
+    max-width: 600px;
+}
+body {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: Cambria, Georgia, serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.album-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.album-gallery img {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.7);
+    transition: transform 0.5s ease;
+}
+
+.album-gallery img:hover {
+    transform: scale(1.08);
+}
+
+.album-cover {
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(239, 85, 85, 0.956);
+    transition: transform 0.5s ease-in-out;
+    
+    
+}
+
+.album-cover:hover {
+    transform: scale(1.08);
+    cursor: pointer;
+}
+
+.tracklist {
+    color: brown;
+    background-color: rgba(106, 1, 2, 0.8);
+    font-family: serif;
+    font-weight: 900;
+    text-align: center;
+    font-size: 24px;
+    padding: 30px 50px;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.95);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.single-cover {
+    width: 300px;       /* նկարի լայնությունը */
+    height: auto;
+    display: block;     /* կարևոր */
+    margin: 20px auto;  /* կենտրոնում */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.7);
+    transition: transform 0.5s ease;
+}
+
+.single-cover:hover {
+    transform: scale(1.08);
+    cursor: pointer;
+}
+.album-concept {
+    display: grid;          /* grid container */
+    place-items: center;    /* horizontal + vertical centering */
+    width: 100%;
+    margin: 40px auto;      /* vertical spacing + horizontal centering */
+}
+
+.album-concept img {
+    width: 100%;           /* fill parent container */
+    max-width: 800px;      /* լուսանկարն ավելի մեծ չլինի */
+    height: auto;          /* preserve aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.7);
+    transition: transform 0.5s ease;
+}
+
+.album-concept img:hover {
+    transform: scale(1.05); /* փոքր enlargement, առանց margin խնդիրների */
+    cursor: pointer;
+}
+
+
+    </style>
+</head>
+<body>
+
+    <h1>ROMANCE</h1>
+    <h2>ROMAN 1ST STUDIO FULL ALBUM</h2>
+
+    <!-- Փոքրացած album cover -->
+    <img src="ROMANCE.png" alt="ROMANCE Album Cover" class="album-cover">
+
+    <ol>
+        <li>ROMANCE (intro)</li>
+        <li>Hold Me In Your Arms (Title 1)</li>
+        <li>Escape (down)</li>
+        <li>In Love With You</li>
+        <li>Love Again (Title 2)</li>
+        <li>Kiss Miss</li>
+        <li>Lips Are Screaming</li>
+        <li>F My Walls</li>
+        <li>Starbright</li>
+        <li>Redwine</li>
+        <li>Kind To Me</li>
+        <li>You & Me</li>
+        <li>Shit That We Are</li>
+        <li>More</li>
+    </ol>
+
+<div class="album-gallery">
+    <img src="ROMANCE_2cover.png" class="album-cover">
+    <img src="jenniecover1.jpg" class="album-cover">
+    <img src="jenniecover2.jpg" class="album-cover">
+    <img src="jennicover3.jpg" class="album-cover">
+    <img src="jenniecover4.jpg" class="album-cover">
+    <img src="jenniecover5.jpg" class="album-cover">
+    <img src="jenniecover6.jpg" class="album-cover">
+</div>
+
+<div class="album-concept">
+<img src="jennieconcept1.jpg">
+<img src="jennieconcept.jpg">
+
+</div>
+
+
+
+ <!-- Modal -->
+<div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img">
+</div>
+
+<script>
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("modal-img");
+    const closeBtn = document.getElementsByClassName("close")[0];
+
+    document.querySelectorAll(".album-cover").forEach(img => {
+        img.onclick = (close) => {
+            modal.style.display = "block";
+            modalImg.src = img.src;
+        };
+    });
+
+    closeBtn.onclick = () => {
+        modal.style.display = "none";
+        modal.onclick = () => {
+    modal.style.display = "none";
+};
+    };
+</script>
+
+<p> OUT MAY 23RD 2026 </p>
+
+
+</body>
+</html>
